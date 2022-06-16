@@ -65,7 +65,6 @@ namespace doan.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             DichVu dichVu = db.DichVus.Find(id);
-            ViewBag.maDV = LayMaDV();
             if (dichVu == null)
             {
                 return HttpNotFound();

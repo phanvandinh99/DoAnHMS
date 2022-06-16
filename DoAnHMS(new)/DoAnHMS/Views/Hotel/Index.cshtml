@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DoAnHMS.Models.LoaiPhong>
+﻿@model IEnumerable<DoAnHMS.Models.Phong>
 
 @{
     Layout = null;
@@ -490,13 +490,13 @@
                     <div class="col-md-3 price-grid ">
                         <div class="price-block agile">
                             <div class="price-gd-top">
-                                <img src="~/Images/@Html.DisplayFor(modelItem => item.hinhAnh)" alt="" class="img-responsive" style="height:300px; width:255px" />
-                                <h4>@Html.DisplayFor(modelItem => item.tenLP)</h4>
+                                <img src="~/Images/@item.LoaiPhong.hinhAnh" alt="" class="img-responsive" style="height:300px; width:255px" />
+                                <h4>@item.LoaiPhong.tenLP</h4>
                             </div>
                             <div class="price-gd-bottom">
                                 <div class="price-selet">
-                                    <h3><span>@{ string dongia = item.donGia.ToString("#,##0");} @dongia</span>VND</h3>
-                                    <a href="#contact" class="scroll">ĐẶT NGAY</a>
+                                    <h3><span>@{ string dongia = item.LoaiPhong.donGia.ToString("#,##0");} @dongia</span>VND</h3>
+                                    <a href="/Hotel/DatPhong?maphong=@item.maP" >ĐẶT NGAY</a>
                                 </div>
                             </div>
                         </div>
